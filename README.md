@@ -20,7 +20,11 @@ Se encontrar um problema sugiro abrir um Issue e na medida do possível iremos l
 
 Via Composer
 
+```bash
 composer require o2ti/formatting-legacy-brazilian
+```
 
 Uso
+```bash
 bin/magento o2ti:customer:brazilian_formatting
+```
