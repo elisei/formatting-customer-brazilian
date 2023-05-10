@@ -1,0 +1,19 @@
+{
+    "name": "o2ti/formatting-legacy-brazilian",
+    "description": "Formatting legacy clients for Brazilian standards",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "magento/framework": "*"
+    },
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "O2TI\\FormattingCustomerBrazilian\\": ""
+        }
+    }
+}
