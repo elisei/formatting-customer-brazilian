@@ -90,7 +90,7 @@ class Formatting extends AbstractModel
         $addressRepository = $this->addressFactory->getList($searchCriteria);
         foreach ($addressRepository->getItems() as $address) {
             if ($address->getCountryId() === "BR") {
-                $vatValidate = $this->setVatIdInAddress($taxvat, $address);
+                $vatValidate = isset($taxvat) ? $this->setVatIdInAddress($taxvat, $address) : false;
                 if (!$vatValidate) {
                     $this->writeln('<error>'.
                         __('Email %1 - Endereço inválido - %2', $email, $taxvat)
@@ -205,7 +205,6 @@ class Formatting extends AbstractModel
                     $this->writeln('<info>'.
                         __('Email %1 - VatId %2 - Phone %3', $email, $vatId, $phone).
                         '</info>');
-                    return true;
                 } catch (LocalizedException $exc) {
                     $email = $customer->getEmail();
                     $msg = $exc->getMessage();
@@ -215,6 +214,6 @@ class Formatting extends AbstractModel
             }
         }
 
-        return false;
+        return true;
     }
 }
