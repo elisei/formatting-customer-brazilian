@@ -22,6 +22,8 @@ Via Composer
 
 ```bash
 composer require o2ti/formatting-legacy-brazilian
+bin/magento s:up
+bin/magento s:di:c
 ```
 
 Uso
