@@ -1,4 +1,5 @@
 <?php
+
 namespace O2TI\FormattingCustomerBrazilian\Logger;
 
 use Magento\Framework\Logger\Handler\Base;
@@ -12,7 +13,7 @@ class Handler extends Base
      * @var int
      */
     protected $loggerType = Logger::INFO;
-    
+
     /**
      * Custom File name.
      *

@@ -3,10 +3,10 @@
 namespace O2TI\FormattingCustomerBrazilian\Console\Command;
 
 use Magento\Framework\App\State;
+use O2TI\FormattingCustomerBrazilian\Model\Console\Formatting;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use O2TI\FormattingCustomerBrazilian\Model\Console\Formatting;
 
 class BrazilianFormatting extends Command
 {
@@ -55,7 +55,7 @@ class BrazilianFormatting extends Command
     /**
      * Execute.
      *
-     * @param InputInterface $input
+     * @param InputInterface  $input
      * @param OutputInterface $output
      *
      * @return int
@@ -67,7 +67,7 @@ class BrazilianFormatting extends Command
     {
         $this->state->setAreaCode(\Magento\Framework\App\Area::AREA_ADMINHTML);
         $this->format->setOutput($output);
-        
+
         return $this->format->execute();
     }
 }
